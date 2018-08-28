@@ -8,7 +8,7 @@ trans=pd.read_table('output.txt', header=None,index_col=0)
 def apriori(trans, support=0.01, minlen=1):
     ts=pd.get_dummies(trans.unstack().dropna()).groupby(level=1).sum()
 
-    collen, rowlen  =ts.shape
+    collen, rowlen  = ts.shape
 
     #-------------Max leng (not used)
     #tssum=ts.sum(axis=1)
